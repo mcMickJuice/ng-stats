@@ -8,7 +8,7 @@
 	
 	else if(typeof define === 'function' && define.amd) {
 		console.log('in amd')
-		define(["angular"], factory);
+		define("ng-stats",["angular"], factory);
 	}
 		
 	else if(typeof exports === 'object') {
