@@ -2,12 +2,16 @@
 
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
+		console.log('in module')
 		module.exports = factory(require("angular"));
 	else if(typeof define === 'function' && define.amd)
+		console.log('in amd')
 		define(["angular"], factory);
 	else if(typeof exports === 'object')
+	console.log('in common land')
 		exports["showAngularStats"] = factory(require("angular"));
 	else
+		console.log('in root??')
 		root["showAngularStats"] = factory(root["angular"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
 return /******/ (function(modules) { // webpackBootstrap
