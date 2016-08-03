@@ -1,18 +1,26 @@
 //! ng-stats version 2.5.4 built with ♥ by Kent C. Dodds <kent@doddsfamily.us> (http://kent.doddsfamily.us), Viper Bailey <jinxidoru@gmail.com> (http://jinxidoru.blogspot.com), Daniel Lamb <dlamb.open.source@gmail.com> (http://daniellmb.com) (ó ì_í)=óò=(ì_í ò)
 
 (function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		console.log('in module')
+	if(typeof exports === 'object' && typeof module === 'object') {
+			console.log('in module')
 		module.exports = factory(require("angular"));
-	else if(typeof define === 'function' && define.amd)
+	}
+	
+	else if(typeof define === 'function' && define.amd) {
 		console.log('in amd')
 		define(["angular"], factory);
-	else if(typeof exports === 'object')
-	console.log('in common land')
+	}
+		
+	else if(typeof exports === 'object') {
+		console.log('in common land')
 		exports["showAngularStats"] = factory(require("angular"));
-	else
-		console.log('in root??')
-		root["showAngularStats"] = factory(root["angular"]);
+	}
+		
+	else {
+	console.log('in root??')
+		root["showAngularStats"] = factory(root["angular"]);	
+	}
+		
 })(this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
