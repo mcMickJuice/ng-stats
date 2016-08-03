@@ -132,8 +132,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function autoload(options) {
 	  if (window.self.angular && getRootScope()) {
+	  	console.log('self.angular')
 	    showAngularStats(options);
 	  } else {
+	  	console.log('setting timeout to autoload')
 	    // wait for angular to load...
 	    setTimeout(function () {
 	      autoload(options);
